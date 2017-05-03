@@ -1,0 +1,65 @@
+// FADE
+.fade
+  @extend .animated
+
+.fade-enter,
+.fade-appear 
+  animation: 0.5s fadeIn 
+
+.fade-leave.fade-leave-active
+  animation: 0.5s fadeOut
+
+//slideUp
+.slideTop
+  @extend .animated
+
+.slideUp-enter,
+.slideUp-appear 
+  animation: 0.3s slideInUp
+
+.slideUp-leave.slideUp-leave-active
+  animation: 0.3s slideInUp
+
+//slideDown
+.slideDown
+  @extend .animated
+
+.slideDown-enter,
+.slideDown-appear 
+  animation: 0.3s slideInDown
+
+.slideDown-leave.slideDown-leave-active
+  animation: 0.3s slideInDown
+
+//slideRight
+.slideRight
+  @extend .animated
+
+.slideRight-enter,
+.slideRight-appear 
+  animation: 0.3s slideInRight
+
+.slideRight-leave.slideRight-leave-active
+  animation: 0.3s slideOutRight
+
+//slideLeft
+.slideLeft
+  @extend .animated
+
+.slideLeft-enter,
+.slideLeft-appear 
+  animation: 0.3s slideInLeft
+
+.slideLeft-leave.slideLeft-leave-active
+  animation: 0.3s slideOutLeft
+
+//bounceIn
+.bounceIn
+  @extend .animated
+
+.bounceIn-enter,
+.bounceIn-appear 
+  animation: 0.3s bounceIn
+
+.bounceIn-leave.bounceIn-leave-active
+  animation: 0.3s bounceIn

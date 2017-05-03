@@ -1,0 +1,48 @@
+{
+  "name": "react-node-ts-seed",
+  "author": {
+    "name": "Andrew Birkholz"
+  },
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "animate-sass": "^0.6.6",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1",
+    "react": "<=15.4.2",
+    "react-addons-css-transition-group": "<=15.4.2",
+    "react-dom": "<=15.4.2",
+    "react-router": "^4.0.0",
+    "react-router-dom": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.35",
+    "@types/jest": "^19.2.2",
+    "@types/lodash": "^4.14.62",
+    "@types/morgan": "^1.7.32",
+    "@types/node": "^7.0.10",
+    "@types/react": "^15.0.20",
+    "@types/react-addons-css-transition-group": "^15.0.1",
+    "@types/react-dom": "^0.14.23",
+    "@types/react-router": "^4.0.1",
+    "@types/react-router-dom": "^4.0.1",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.1",
+    "node-sass-tilde-importer": "0.0.4",
+    "npm-run-all": "^4.0.2",
+    "react-scripts-ts": "1.1.8",
+    "typescript": "^2.2.2"
+  },
+  "scripts": {
+    "build": "npm run build-client && npm run build-server",
+    "build-client": "npm run build-css && react-scripts-ts build",
+    "build-css": "node-sass --include-path sass src/index.sass --include-path node_modules src/index.css --importer=node_modules/node-sass-tilde-importer",
+    "build-server": "tsc ./server/* --outDir ./build/server",
+    "start": "npm-run-all -p server",
+    "start-client": "npm-run-all -p watch-css start-js",
+    "start-js": "react-scripts-ts start",
+    "server": "node ./build/server",
+    "test": "react-scripts-ts test --env=jsdom",
+    "watch-css": "npm run build-css && node-sass --include-path sass src/index.sass --include-path node_modules src/index.css --watch"
+  }
+}
