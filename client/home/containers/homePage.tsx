@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as CSSTransitionGroup from 'react-addons-css-transition-group';
+import {CSSTransitionGroup} from 'react-transition-group';
 import App from '../../app';
 import Home from '../';
 

@@ -1,6 +1,7 @@
 /node_modules
 /build
 *.css
+*.lock
 .DS_Store
 .env
 .vscode
