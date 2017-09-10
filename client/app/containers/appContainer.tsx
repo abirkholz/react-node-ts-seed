@@ -1,11 +1,8 @@
 import * as React from 'react';
-import { Router, Route } from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
+import { Switch, Route } from 'react-router-dom';
 
 import App from '../';
 import Home from '../../home';
-
-const browserHistory = createBrowserHistory();
 
 class AppContainer extends React.Component<any, any> { 
 
@@ -18,12 +15,12 @@ class AppContainer extends React.Component<any, any> {
 
   render() {
     return (
-      <Router history={browserHistory}>
         <div className="App">
           <App.Components.Navbar />
-          <Route exact={true} path="/" component={Home.Containers.HomePage} />
+          <Switch>
+            <Route exact={true} path="/" component={Home.Containers.HomePage}/>
+          </Switch>
         </div>
-      </Router>
     );
   }
 }

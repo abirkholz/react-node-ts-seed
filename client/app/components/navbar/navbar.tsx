@@ -13,7 +13,7 @@ class Navbar extends React.Component<any, any> {
         <div className="navbar-title"> react-node-ts-seed </div>
       </div>
     );
-  };
-};
+  }
+}
 
 export default Navbar;
